@@ -20,6 +20,8 @@ import {
   Lock,
   Smartphone,
   Headphones,
+  ChevronDown,
+  Languages,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,6 +33,12 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { useTheme } from "next-themes";
 import {
   organizationSchema,
@@ -44,6 +52,13 @@ export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState("en");
+
+  const languages = {
+    en: { name: "English", flag: "🇺🇸" },
+    fr: { name: "Français", flag: "🇫🇷" },
+    ar: { name: "العربية", flag: "🇲🇦" },
+  };
 
   const wtsp = "https://wa.link/7l10vn";
   useEffect(() => {
@@ -62,6 +77,12 @@ export default function LandingPage() {
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  const changeLanguage = (langCode: string) => {
+    setCurrentLanguage(langCode);
+    // Here you could add actual language switching logic
+    // For example: i18n.changeLanguage(langCode);
   };
 
   const container = {
@@ -186,6 +207,31 @@ export default function LandingPage() {
               </Link>
             </nav>
             <div className="hidden md:flex gap-4 items-center">
+              {/* Language Selector */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="rounded-full">
+                    <Languages className="size-[18px]" />
+                    <span className="sr-only">Select language</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  {Object.entries(languages).map(([code, lang]) => (
+                    <DropdownMenuItem
+                      key={code}
+                      onClick={() => changeLanguage(code)}
+                      className={`cursor-pointer ${
+                        currentLanguage === code ? "bg-accent" : ""
+                      }`}
+                    >
+                      <span className="mr-2">{lang.flag}</span>
+                      {lang.name}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              {/* Theme Toggle */}
               <Button
                 variant="ghost"
                 size="icon"
@@ -208,6 +254,31 @@ export default function LandingPage() {
               </a>
             </div>
             <div className="flex items-center gap-4 md:hidden">
+              {/* Mobile Language Selector */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="rounded-full">
+                    <Languages className="size-[18px]" />
+                    <span className="sr-only">Select language</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  {Object.entries(languages).map(([code, lang]) => (
+                    <DropdownMenuItem
+                      key={code}
+                      onClick={() => changeLanguage(code)}
+                      className={`cursor-pointer ${
+                        currentLanguage === code ? "bg-accent" : ""
+                      }`}
+                    >
+                      <span className="mr-2">{lang.flag}</span>
+                      {lang.name}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+
+              {/* Mobile Theme Toggle */}
               <Button
                 variant="ghost"
                 size="icon"

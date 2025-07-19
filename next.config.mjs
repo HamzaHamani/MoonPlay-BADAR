@@ -13,10 +13,6 @@ const nextConfig = {
   },
   // Enable compression
   compress: true,
-  // Performance optimizations
-  experimental: {
-    optimizeCss: true,
-  },
   // SEO optimizations
   trailingSlash: false,
   generateEtags: true,
