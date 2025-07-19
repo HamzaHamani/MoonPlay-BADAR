@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "testimonials": "Témoignages",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "startWatching": "Commencer à Regarder"
+  },
+  "hero": {
+    "badge": "Bientôt Disponible",
+    "title": "Élevez Votre Divertissement avec MoonPlay",
+    "description": "La plateforme IPTV tout-en-un offrant l'accès à la télévision en direct premium, aux sports, films et séries — à tout moment, n'importe où. Coupez les câbles et profitez d'un divertissement de classe mondiale.",
+    "features": {
+      "noSetupFee": "Pas de frais d'installation",
+      "cancelAnytime": "Annulez à tout moment",
+      "freeSupport": "Support 24/7"
+    }
+  },
+  "logos": {
+    "title": "Chaînes et plateformes disponibles sur MoonPlay IPTV"
+  },
+  "features": {
+    "badge": "Fonctionnalités",
+    "title": "Tout Ce Dont Vous Avez Besoin pour un Streaming Non-Stop",
+    "description": "MoonPlay offre l'expérience de streaming ultime — qualité cristalline, chaînes mondiales et support 24/7. Voici pourquoi les utilisateurs l'adorent :",
+    "items": {
+      "instantSetup": {
+        "title": "Configuration Instantanée",
+        "description": "Commencez à regarder en quelques minutes avec une activation facile et l'appairage d'appareils."
+      },
+      "hdQuality": {
+        "title": "Qualité HD et 4K",
+        "description": "Profitez d'un streaming ultra-clair en HD et 4K sur tout le contenu pris en charge."
+      },
+      "worldwideChannels": {
+        "title": "Chaînes Mondiales",
+        "description": "Accédez à la télévision en direct, aux sports et au divertissement du monde entier."
+      },
+      "secureStreaming": {
+        "title": "Streaming Sécurisé",
+        "description": "Votre connexion est protégée par un streaming crypté et privé."
+      },
+      "multiDevice": {
+        "title": "Accès Multi-Appareils",
+        "description": "Regardez sur Smart TV, téléphones, tablettes ou ordinateurs portables — à tout moment, n'importe où."
+      },
+      "support": {
+        "title": "Support Client 24/7",
+        "description": "Notre équipe de support est là pour vous aider à tout moment, jour et nuit."
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Comment Ça Marche",
+    "title": "Début Simple, Divertissement Infini",
+    "description": "Commencez en quelques minutes et découvrez la différence que MoonPlay apporte à votre divertissement.",
+    "steps": {
+      "contact": {
+        "step": "01",
+        "title": "Contactez-nous pour Commencer",
+        "description": "Contactez-nous via WhatsApp ou email pour choisir votre plan et recevoir votre code d'activation."
+      },
+      "activate": {
+        "step": "02",
+        "title": "Activez Votre Abonnement",
+        "description": "Utilisez votre code pour activer MoonPlay sur votre appareil préféré — Smart TV, téléphone, tablette ou ordinateur portable."
+      },
+      "watch": {
+        "step": "03",
+        "title": "Commencez à Regarder Instantanément",
+        "description": "Profitez d'un divertissement non-stop avec le sport en direct, les films et la télévision du monde entier."
+      }
+    }
+  },
+  "testimonials": {
+    "badge": "Témoignages",
+    "title": "Aimé par les Équipes du Monde Entier",
+    "description": "Ne nous croyez pas sur parole. Découvrez ce que nos clients disent de leur expérience."
+  },
+  "pricing": {
+    "badge": "Tarifs",
+    "title": "Tarifs Simples et Transparents",
+    "description": "Choisissez le plan qui convient à votre entreprise. Tous les plans incluent un essai gratuit de 14 jours."
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Questions Fréquemment Posées",
+    "description": "Trouvez des réponses aux questions courantes sur notre plateforme."
+  },
+  "cta": {
+    "title": "Prêt à Débloquer un Divertissement Non-Stop ?",
+    "description": "Rejoignez des milliers de téléspectateurs qui profitent de plus de 3000 chaînes en direct et de contenu à la demande. Avec MoonPlay, vous êtes toujours à un clic du divertissement premium.",
+    "subtitle": "Activation instantanée. Aucun contrat. Streamez n'importe où, n'importe quand."
+  },
+  "footer": {
+    "description": "Streamez plus intelligemment avec MoonPlay — plus de 3000 chaînes, une plateforme IPTV puissante, un divertissement infini.",
+    "product": "Produit",
+    "resources": "Ressources",
+    "company": "Entreprise",
+    "copyright": "Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "cookies": "Politique des Cookies"
+  }
+}

@@ -40,6 +40,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/components/language-provider";
 import {
   organizationSchema,
   productSchema,
@@ -52,13 +54,8 @@ export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState("en");
-
-  const languages = {
-    en: { name: "English", flag: "🇺🇸" },
-    fr: { name: "Français", flag: "🇫🇷" },
-    ar: { name: "العربية", flag: "🇲🇦" },
-  };
+  const { t } = useTranslation('common');
+  const { currentLanguage, changeLanguage, languages, isRTL } = useLanguage();
 
   const wtsp = "https://wa.link/7l10vn";
   useEffect(() => {
@@ -79,12 +76,6 @@ export default function LandingPage() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  const changeLanguage = (langCode: string) => {
-    setCurrentLanguage(langCode);
-    // Here you could add actual language switching logic
-    // For example: i18n.changeLanguage(langCode);
-  };
-
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -102,39 +93,33 @@ export default function LandingPage() {
 
   const features = [
     {
-      title: "Instant Setup",
-      description:
-        "Start watching in minutes with easy activation and device pairing.",
+      title: t("features.items.instantSetup.title"),
+      description: t("features.items.instantSetup.description"),
       icon: <Tv className="size-5" />,
     },
     {
-      title: "HD & 4K Quality",
-      description:
-        "Enjoy ultra-clear streaming in HD and 4K across all supported content.",
+      title: t("features.items.hdQuality.title"),
+      description: t("features.items.hdQuality.description"),
       icon: <MonitorSmartphone className="size-5" />,
     },
     {
-      title: "Worldwide Channels",
-      description:
-        "Access live TV, sports, and entertainment from across the globe.",
+      title: t("features.items.worldwideChannels.title"),
+      description: t("features.items.worldwideChannels.description"),
       icon: <Globe className="size-5" />,
     },
     {
-      title: "Secure Streaming",
-      description:
-        "Your connection is protected with encrypted and private streaming.",
+      title: t("features.items.secureStreaming.title"),
+      description: t("features.items.secureStreaming.description"),
       icon: <Lock className="size-5" />,
     },
     {
-      title: "Multi-Device Access",
-      description:
-        "Watch on Smart TVs, phones, tablets, or laptops — anytime, anywhere.",
+      title: t("features.items.multiDevice.title"),
+      description: t("features.items.multiDevice.description"),
       icon: <Smartphone className="size-5" />,
     },
     {
-      title: "24/7 Customer Support",
-      description:
-        "Our support team is here to assist you at any time, day or night.",
+      title: t("features.items.support.title"),
+      description: t("features.items.support.description"),
       icon: <Headphones className="size-5" />,
     },
   ];
@@ -185,25 +170,25 @@ export default function LandingPage() {
                 href="#features"
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                Features
+                {t("nav.features")}
               </Link>
               <Link
                 href="#testimonials"
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                Testimonials
+                {t("nav.testimonials")}
               </Link>
               <Link
                 href="#pricing"
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                Pricing
+                {t("nav.pricing")}
               </Link>
               <Link
                 href="#faq"
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                FAQ
+                {t("nav.faq")}
               </Link>
             </nav>
             <div className="hidden md:flex gap-4 items-center">
@@ -248,7 +233,7 @@ export default function LandingPage() {
 
               <a href={wtsp} target="_blank">
                 <Button className="rounded-full">
-                  Start Watching
+                  {t("nav.startWatching")}
                   <ChevronRight className="ml-1 size-4" />
                 </Button>
               </a>
@@ -373,15 +358,13 @@ export default function LandingPage() {
                   className="mb-4 rounded-full px-4 py-1.5 text-sm font-medium"
                   variant="secondary"
                 >
-                  Launching Soon
+                  {t("hero.badge")}
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-                  Elevate Your Entertainment with MoonPlay
+                  {t("hero.title")}
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                  The all-in-one IPTV platform offering access to premium live
-                  TV, sports, movies, and series — anytime, anywhere. Cut the
-                  cords and enjoy world-class entertainment.
+                  {t("hero.description")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a href={wtsp} target="_blank">
@@ -406,15 +389,15 @@ export default function LandingPage() {
                 <div className="flex items-center justify-center gap-4 mt-6 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1">
                     <Check className="size-4 text-primary" />
-                    <span>24/7 supp</span>
+                    <span>{t("hero.features.freeSupport")}</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <Check className="size-4 text-primary" />
-                    <span>1yr guarantee</span>
+                    <span>{t("hero.features.noSetupFee")}</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <Check className="size-4 text-primary" />
-                    <span>Cancel anytime</span>
+                    <span>{t("hero.features.cancelAnytime")}</span>
                   </div>
                 </div>
               </motion.div>

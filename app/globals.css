@@ -6,6 +6,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Arabic font support */
+[lang="ar"] {
+  font-family: 'Cairo', 'Tajawal', Arial, sans-serif;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

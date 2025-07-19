@@ -13,6 +13,11 @@ const nextConfig = {
   },
   // Enable compression
   compress: true,
+  // i18n configuration
+  i18n: {
+    locales: ['en', 'fr', 'ar'],
+    defaultLocale: 'en',
+  },
   // SEO optimizations
   trailingSlash: false,
   generateEtags: true,

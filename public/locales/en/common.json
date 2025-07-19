@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "features": "Features",
+    "testimonials": "Testimonials", 
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "startWatching": "Start Watching"
+  },
+  "hero": {
+    "badge": "Launching Soon",
+    "title": "Elevate Your Entertainment with MoonPlay",
+    "description": "The all-in-one IPTV platform offering access to premium live TV, sports, movies, and series — anytime, anywhere. Cut the cords and enjoy world-class entertainment.",
+    "features": {
+      "noSetupFee": "No setup fee",
+      "cancelAnytime": "Cancel anytime", 
+      "freeSupport": "24/7 support"
+    }
+  },
+  "logos": {
+    "title": "Channels and platforms available on MoonPlay IPTV"
+  },
+  "features": {
+    "badge": "Features",
+    "title": "Everything You Need for Non-Stop Streaming",
+    "description": "MoonPlay delivers the ultimate streaming experience — crystal-clear quality, global channels, and 24/7 support. Here's why users love it:",
+    "items": {
+      "instantSetup": {
+        "title": "Instant Setup",
+        "description": "Start watching in minutes with easy activation and device pairing."
+      },
+      "hdQuality": {
+        "title": "HD & 4K Quality", 
+        "description": "Enjoy ultra-clear streaming in HD and 4K across all supported content."
+      },
+      "worldwideChannels": {
+        "title": "Worldwide Channels",
+        "description": "Access live TV, sports, and entertainment from across the globe."
+      },
+      "secureStreaming": {
+        "title": "Secure Streaming",
+        "description": "Your connection is protected with encrypted and private streaming."
+      },
+      "multiDevice": {
+        "title": "Multi-Device Access",
+        "description": "Watch on Smart TVs, phones, tablets, or laptops — anytime, anywhere."
+      },
+      "support": {
+        "title": "24/7 Customer Support",
+        "description": "Our support team is here to assist you at any time, day or night."
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "How It Works",
+    "title": "Simple Start, Endless Entertainment",
+    "description": "Get started in minutes and experience the difference MoonPlay brings to your entertainment.",
+    "steps": {
+      "contact": {
+        "step": "01",
+        "title": "Contact Us to Get Started",
+        "description": "Reach out to us via WhatsApp or email to choose your plan and receive your activation code."
+      },
+      "activate": {
+        "step": "02", 
+        "title": "Activate Your Subscription",
+        "description": "Use your code to activate MoonPlay on your preferred device — Smart TV, phone, tablet, or laptop."
+      },
+      "watch": {
+        "step": "03",
+        "title": "Start Watching Instantly", 
+        "description": "Enjoy non-stop entertainment with live sports, movies, and TV from all over the world."
+      }
+    }
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "Loved by Teams Worldwide",
+    "description": "Don't just take our word for it. See what our customers have to say about their experience."
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the plan that's right for your business. All plans include a 14-day free trial."
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked Questions",
+    "description": "Find answers to common questions about our platform."
+  },
+  "cta": {
+    "title": "Ready to Unlock Non-Stop Entertainment?",
+    "description": "Join thousands of viewers enjoying over 3000 live channels and on-demand content. With MoonPlay, you're always just a click away from premium entertainment.",
+    "subtitle": "Instant activation. No contracts. Stream anywhere, anytime."
+  },
+  "footer": {
+    "description": "Stream smarter with MoonPlay — over 3000 channels, one powerful IPTV platform, endless entertainment.",
+    "product": "Product",
+    "resources": "Resources", 
+    "company": "Company",
+    "copyright": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
+  }
+}
