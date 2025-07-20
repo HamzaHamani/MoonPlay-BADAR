@@ -1,7 +1,7 @@
 {
   "nav": {
     "features": "Features",
-    "testimonials": "Testimonials", 
+    "testimonials": "Testimonials",
     "pricing": "Pricing",
     "faq": "FAQ",
     "startWatching": "Start Watching"
@@ -12,7 +12,7 @@
     "description": "The all-in-one IPTV platform offering access to premium live TV, sports, movies, and series — anytime, anywhere. Cut the cords and enjoy world-class entertainment.",
     "features": {
       "noSetupFee": "No setup fee",
-      "cancelAnytime": "Cancel anytime", 
+      "cancelAnytime": "Cancel anytime",
       "freeSupport": "24/7 support"
     }
   },
@@ -29,7 +29,7 @@
         "description": "Start watching in minutes with easy activation and device pairing."
       },
       "hdQuality": {
-        "title": "HD & 4K Quality", 
+        "title": "HD & 4K Quality",
         "description": "Enjoy ultra-clear streaming in HD and 4K across all supported content."
       },
       "worldwideChannels": {
@@ -61,13 +61,13 @@
         "description": "Reach out to us via WhatsApp or email to choose your plan and receive your activation code."
       },
       "activate": {
-        "step": "02", 
+        "step": "02",
         "title": "Activate Your Subscription",
         "description": "Use your code to activate MoonPlay on your preferred device — Smart TV, phone, tablet, or laptop."
       },
       "watch": {
         "step": "03",
-        "title": "Start Watching Instantly", 
+        "title": "Start Watching Instantly",
         "description": "Enjoy non-stop entertainment with live sports, movies, and TV from all over the world."
       }
     }
@@ -75,17 +75,125 @@
   "testimonials": {
     "badge": "Testimonials",
     "title": "Loved by Teams Worldwide",
-    "description": "Don't just take our word for it. See what our customers have to say about their experience."
+    "description": "Don't just take our word for it. See what our customers have to say about their experience.",
+    "items": [
+      {
+        "quote": "MoonPlay كانت مذهلة معنا. هناك الكثير من القنوات وبجودة HD! لم أعد أحتاج إلى الساتلايت.",
+        "author": "كريم العمراني",
+        "role": "الدار البيضاء",
+        "rating": 5
+      },
+      {
+        "quote": "صديقي عرفني على MoonPlay، ومنذ أن جربته أصبحت مدمنًا عليه! دوري الأبطال، نتفليكس، كل شيء في مكان واحد.",
+        "author": "ياسين ب.",
+        "role": "فاس",
+        "rating": 5
+      },
+      {
+        "quote": "فريق MoonPlay يرد عليك فورًا إذا كان عندك أي مشكل. خدمة الزبناء عندهم ممتازة.",
+        "author": "أمينة الزهراوي",
+        "role": "الرباط",
+        "rating": 5
+      },
+      {
+        "quote": "جربت IPTV آخر من قبل، لكن MoonPlay في مستوى آخر. موثوق وسهل التثبيت.",
+        "author": "إيمان ك.",
+        "role": "طنجة",
+        "rating": 5
+      },
+      {
+        "quote": "عندهم قنوات رياضية، مسلسلات، كرتون... ولدي يحبها كثيرًا وتوفر لنا محتوى رائع في المنزل.",
+        "author": "محمد ل.",
+        "role": "أكادير",
+        "rating": 5
+      },
+      {
+        "quote": "التركيب كان سريع وما انتظرتش. عطاوني كود، وفي 5 دقايق بديت نتفرج.",
+        "author": "سكينة ح.",
+        "role": "مراكش",
+        "rating": 5
+      }
+    ]
   },
   "pricing": {
     "badge": "Pricing",
     "title": "Simple, Transparent Pricing",
-    "description": "Choose the plan that's right for your business. All plans include a 14-day free trial."
+    "description": "Choose the plan that's right for your business. All plans include a 14-day free trial.",
+    "plans": [
+      {
+        "name": "Basic",
+        "price": "250 MAD",
+        "description": "Essential streaming with live channels and movie collection for basic entertainment.",
+        "features": [
+          "3000+ live channels worldwide",
+          "Extensive movie & series collection",
+          "Good quality streaming (HD)",
+          "Multi-device support",
+          "24/7 customer support"
+        ],
+        "cta": "Buy Now"
+      },
+      {
+        "name": "VIP",
+        "price": "350 MAD",
+        "description": "Enhanced experience with expanded channel selection and premium content library.",
+        "features": [
+          "10,000+ global channels",
+          "Premium movie & series library",
+          "High quality streaming (FHD)",
+          "Priority device compatibility",
+          "Advanced customer support"
+        ],
+        "cta": "Buy Now",
+        "popular": true
+      },
+      {
+        "name": "Premium",
+        "price": "500 MAD",
+        "description": "Full access to global sports and entertainment with top-tier performance.",
+        "features": [
+          "All global & sports channels",
+          "Massive movie & series collection",
+          "Ultra-high quality (FHD / 4K) with top performance",
+          "Supports all devices and systems",
+          "Priority customer support & guaranteed continuity"
+        ],
+        "cta": "Buy Now"
+      }
+    ],
+    "popularLabel": "Most Popular",
+    "perMonth": "/month"
   },
   "faq": {
     "badge": "FAQ",
     "title": "Frequently Asked Questions",
-    "description": "Find answers to common questions about our platform."
+    "description": "Find answers to common questions about our platform.",
+    "questions": [
+      {
+        "question": "What is MoonPlay IPTV?",
+        "answer": "MoonPlay IPTV is a premium streaming service that provides access to thousands of live TV channels, movies, and shows from around the world. Our service offers high-quality streaming with reliable servers and 24/7 customer support."
+      },
+      {
+        "question": "How many channels do you offer?",
+        "answer": "We offer over 10,000 live TV channels from various countries and regions, including sports, news, entertainment, documentaries, and kids' content. Our channel list is constantly updated with new additions."
+      },
+      {
+        "question": "What devices are supported?",
+        "answer": "MoonPlay IPTV is compatible with Smart TVs, Android devices, iOS devices, Windows, macOS, Amazon FireStick, Android TV boxes, MAG boxes, and more. We provide easy setup guides for all supported devices."
+      },
+      {
+        "question": "Is there a free trial available?",
+        "answer": "Yes, we offer a 24-hour free trial for new customers. This allows you to test our service quality, channel selection, and streaming performance before making a purchase decision."
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept various payment methods including PayPal, credit cards (Visa, MasterCard, American Express), cryptocurrency, and other secure payment gateways for your convenience."
+      },
+      {
+        "question": "How quickly will I receive my login details?",
+        "answer": "Your login credentials will be delivered to your email within 5-30 minutes after payment confirmation. Our automated system ensures quick activation of your subscription."
+      }
+    ]
   },
   "cta": {
     "title": "Ready to Unlock Non-Stop Entertainment?",
@@ -95,7 +203,7 @@
   "footer": {
     "description": "Stream smarter with MoonPlay — over 3000 channels, one powerful IPTV platform, endless entertainment.",
     "product": "Product",
-    "resources": "Resources", 
+    "resources": "Resources",
     "company": "Company",
     "copyright": "All rights reserved.",
     "privacy": "Privacy Policy",

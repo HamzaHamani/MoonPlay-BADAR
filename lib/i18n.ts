@@ -1,11 +1,11 @@
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
-import LanguageDetector from 'i18next-browser-languagedetector'
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 // Import translation files
-import enCommon from '../public/locales/en/common.json'
-import frCommon from '../public/locales/fr/common.json'
-import arCommon from '../public/locales/ar/common.json'
+import enCommon from "../public/locales/en/common.json";
+import frCommon from "../public/locales/fr/common.json";
+import arCommon from "../public/locales/ar/common.json";
 
 const resources = {
   en: {
@@ -17,21 +17,22 @@ const resources = {
   ar: {
     common: arCommon,
   },
-}
+};
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',
+    fallbackLng: "en",
+    lng: "en", // Force default language for SSR
     debug: false,
-    defaultNS: 'common',
-    ns: ['common'],
-    
+    defaultNS: "common",
+    ns: ["common"],
+
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
+      order: ["localStorage", "navigator", "htmlTag"],
+      caches: ["localStorage"],
     },
 
     interpolation: {
@@ -41,6 +42,9 @@ i18n
     react: {
       useSuspense: false,
     },
-  })
 
-export default i18n
+    // Ensure consistent behavior on server and client
+    initImmediate: false,
+  });
+
+export default i18n;

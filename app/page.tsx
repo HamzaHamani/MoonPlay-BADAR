@@ -53,13 +53,11 @@ export default function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  const { t } = useTranslation('common');
-  const { currentLanguage, changeLanguage, languages, isRTL } = useLanguage();
+  const { t } = useTranslation("common");
+  const { currentLanguage, changeLanguage, languages, isRTL, mounted } = useLanguage();
 
   const wtsp = "https://wa.link/7l10vn";
   useEffect(() => {
-    setMounted(true);
     const handleScroll = () => {
       if (window.scrollY > 10) {
         setIsScrolled(true);
@@ -123,6 +121,17 @@ export default function LandingPage() {
       icon: <Headphones className="size-5" />,
     },
   ];
+
+  // Prevent hydration mismatches by ensuring client-side rendering for dynamic content
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-background">
+        <div className="flex items-center justify-center h-screen">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -433,7 +442,7 @@ export default function LandingPage() {
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <p className="text-sm font-medium text-muted-foreground mb-2">
-                  Channels and platforms available on MoonPlay IPTV
+                  {t("logos.title")}
                 </p>
                 <div className="flex flex-wrap items-center mt-2 justify-center gap-8 md:gap-12 lg:gap-32">
                   <Image
@@ -502,15 +511,13 @@ export default function LandingPage() {
                   className="rounded-full px-4 py-1.5 text-sm font-medium"
                   variant="secondary"
                 >
-                  Features
+                  {t("features.badge")}
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-                  Everything You Need for Non-Stop Streaming
+                  {t("features.title")}
                 </h2>
                 <p className="max-w-[800px] text-muted-foreground md:text-lg">
-                  MoonPlay delivers the ultimate streaming experience —
-                  crystal-clear quality, global channels, and 24/7 support.
-                  Here's why users love it:
+                  {t("features.description")}
                 </p>
               </motion.div>
 
@@ -558,14 +565,13 @@ export default function LandingPage() {
                   className="rounded-full px-4 py-1.5 text-sm font-medium"
                   variant="secondary"
                 >
-                  How It Works
+                  {t("howItWorks.badge")}
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-                  Simple Start, Endless Entertainments
+                  {t("howItWorks.title")}
                 </h2>
                 <p className="max-w-[800px] text-muted-foreground md:text-lg">
-                  Get started in minutes and experience the difference MoonPlay
-                  brings to your entertainment.
+                  {t("howItWorks.description")}
                 </p>
               </motion.div>
 
@@ -574,22 +580,19 @@ export default function LandingPage() {
 
                 {[
                   {
-                    step: "01",
-                    title: "Contact Us to Get Started",
-                    description:
-                      "Reach out to us via WhatsApp or email to choose your plan and receive your activation code.",
+                    step: t("howItWorks.steps.contact.step"),
+                    title: t("howItWorks.steps.contact.title"),
+                    description: t("howItWorks.steps.contact.description"),
                   },
                   {
-                    step: "02",
-                    title: "Activate Your Subscription",
-                    description:
-                      "Use your code to activate MoonPlay on your preferred device — Smart TV, phone, tablet, or laptop.",
+                    step: t("howItWorks.steps.activate.step"),
+                    title: t("howItWorks.steps.activate.title"),
+                    description: t("howItWorks.steps.activate.description"),
                   },
                   {
-                    step: "03",
-                    title: "Start Watching Instantly",
-                    description:
-                      "Enjoy non-stop entertainment with live sports, movies, and TV from all over the world.",
+                    step: t("howItWorks.steps.watch.step"),
+                    title: t("howItWorks.steps.watch.title"),
+                    description: t("howItWorks.steps.watch.description"),
                   },
                 ].map((step, i) => (
                   <motion.div
@@ -625,62 +628,20 @@ export default function LandingPage() {
                   className="rounded-full px-4 py-1.5 text-sm font-medium"
                   variant="secondary"
                 >
-                  Testimonials
+                  {t("testimonials.badge")}
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-                  Loved by Teams Worldwide
+                  {t("testimonials.title")}
                 </h2>
                 <p className="max-w-[800px] text-muted-foreground md:text-lg">
-                  Don't just take our word for it. See what our customers have
-                  to say about their experience.
+                  {t("testimonials.description")}
                 </p>
               </motion.div>
 
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {[
-                  {
-                    quote:
-                      "MoonPlay bda m3ana zwine bzaf. Lchaînes kaynin bzaf w f qualité hd! Ma b9itsh 7ta kan7taj satellite.",
-                    author: "Karim El Amrani",
-                    role: "Casablanca",
-                    rating: 5,
-                  },
-                  {
-                    quote:
-                      "Sahbou li 3rrafni 3la MoonPlay, w mli jarrabto sb7t moudmin! Champions League, Netflix, kolchi f blasa wa7da.",
-                    author: "Yassine B.",
-                    role: "Fès",
-                    rating: 5,
-                  },
-                  {
-                    quote:
-                      "L'équipe dyal MoonPlay kayrdo m3ak daba daba ila 3ndk chi moshkil. Service client dialhom top.",
-                    author: "Amina Zahraoui",
-                    role: "Rabat",
-                    rating: 5,
-                  },
-                  {
-                    quote:
-                      "Jarrabt chi IPTV qbl, walakin MoonPlay f niveau akhor. T9dya, w sahla fl install.",
-                    author: "Imane K.",
-                    role: "Tanger",
-                    rating: 5,
-                  },
-                  {
-                    quote:
-                      "3ndhom lchaînes dial bola, series, dessins animés... Bghah wlidi w rda lina dakchi mzyan f dar.",
-                    author: "Mohamed L.",
-                    role: "Agadir",
-                    rating: 5,
-                  },
-                  {
-                    quote:
-                      "Installation kant bzrb w ma tsentitch. 3tawni code, w f 5 dqaye9 bdit kan tfrraj.",
-                    author: "Soukaina H.",
-                    role: "Marrakech",
-                    rating: 5,
-                  },
-                ].map((testimonial, i) => (
+                {(
+                  t("testimonials.items", { returnObjects: true }) as any[]
+                ).map((testimonial: any, i: number) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, y: 20 }}
@@ -693,7 +654,7 @@ export default function LandingPage() {
                         <div className="flex mb-4">
                           {Array(testimonial.rating)
                             .fill(0)
-                            .map((_, j) => (
+                            .map((_: any, j: number) => (
                               <Star
                                 key={j}
                                 className="size-4 text-yellow-500 fill-yellow-500"
@@ -741,14 +702,13 @@ export default function LandingPage() {
                   className="rounded-full px-4 py-1.5 text-sm font-medium"
                   variant="secondary"
                 >
-                  Pricing
+                  {t("pricing.badge")}
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-                  Simple, Transparent Pricing
+                  {t("pricing.title")}
                 </h2>
                 <p className="max-w-[800px] text-muted-foreground md:text-lg">
-                  Choose the plan that's right for your business. All plans
-                  include a 14-day free trial.
+                  {t("pricing.description")}
                 </p>
               </motion.div>
 
@@ -766,51 +726,16 @@ export default function LandingPage() {
                   </div>
                   <TabsContent value="monthly">
                     <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
-                      {[
-                        {
-                          name: "Basic ",
-                          price: "150 MAD",
-                          description:
-                            "Affordable access to 3000+ live channels and movies.",
-                          features: [
-                            "3000+ channels and movies",
-                            "SD / HD quality",
-                            "Compatible with all devices",
-                            "24/7 technical support",
-                          ],
-                          cta: "Buy Now",
-                        },
-                        {
-                          name: "VIP ",
-                          price: "300 MAD",
-                          description:
-                            "Enjoy 10,000+ channels and a full movie/series library.",
-                          features: [
-                            "10,000+ channels",
-                            "HD / FHD / 4K quality",
-                            "Updated movie & series library",
-                            "Works on all devices",
-                            "Daily updates",
-                            "Premium 24/7 support",
-                          ],
-                          cta: "Buy Now",
-                          popular: true,
-                        },
-                        {
-                          name: "Premium ",
-                          price: "500 MAD",
-                          description:
-                            "Full access to global sports and entertainment with top-tier performance.",
-                          features: [
-                            "All global & sports channels",
-                            "Massive movie & series collection",
-                            "Ultra-high quality (FHD / 4K) with top performance",
-                            "Supports all devices and systems",
-                            "Priority customer support & guaranteed continuity",
-                          ],
-                          cta: "Buy Now",
-                        },
-                      ].map((plan, i) => (
+                      {(
+                        t("pricing.plans", { returnObjects: true }) as Array<{
+                          name: string;
+                          price: string;
+                          description: string;
+                          features: string[];
+                          cta: string;
+                          popular?: boolean;
+                        }>
+                      ).map((plan, i) => (
                         <motion.div
                           key={i}
                           initial={{ opacity: 0, y: 20 }}
@@ -827,7 +752,7 @@ export default function LandingPage() {
                           >
                             {plan.popular && (
                               <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-3 py-1 text-xs font-medium rounded-bl-lg">
-                                Most Popular
+                                {t("pricing.popularLabel")}
                               </div>
                             )}
                             <CardContent className="p-6 flex flex-col h-full">
@@ -839,7 +764,7 @@ export default function LandingPage() {
                                   {plan.price}
                                 </span>
                                 <span className="text-muted-foreground ml-1">
-                                  /month
+                                  {t("pricing.perMonth")}
                                 </span>
                               </div>
                               <p className="text-muted-foreground mt-2">
@@ -890,51 +815,24 @@ export default function LandingPage() {
                   className="rounded-full px-4 py-1.5 text-sm font-medium"
                   variant="secondary"
                 >
-                  FAQ
+                  {t("faq.badge")}
                 </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-                  Frequently Asked Questions
+                  {t("faq.title")}
                 </h2>
                 <p className="max-w-[800px] text-muted-foreground md:text-lg">
-                  Find answers to common questions about our platform.
+                  {t("faq.description")}
                 </p>
               </motion.div>
 
               <div className="mx-auto max-w-3xl">
                 <Accordion type="single" collapsible className="w-full">
-                  {[
-                    {
-                      question: "Kifach n9dar nchtari MoonPlay?",
-                      answer:
-                        "khassek ttsal bina direct (WhatsApp) bach ndwazouk l'achat w nfa3lou lik l'compte f 1 à 2 minutes.",
-                    },
-                    {
-                      question: "Chno kayn f kol pack?",
-                      answer:
-                        "3andna 3 plans: Basic, VIP, w Premium. Basic fih 3000+ chaîne, VIP fih 10,000+ chaîne w library dyal films, w Premium fih kolchi (chaînes sport mondiaux, qualité 4K, w support spécial).",
-                    },
-                    {
-                      question:
-                        "Est-ce que MoonPlay khdam 3la tous les appareils?",
-                      answer:
-                        "Ah oui! MoonPlay khdam 3la Smart TV, Android, PC, Tablet, TV Box… kayna compatibilité m3a kolchi.",
-                    },
-                    {
-                      question: "Est-ce kayn test khdma awalan?",
-                      answer:
-                        "Iwa tab3an! Kankhdmo test IPTV f balasa dialek bash tchouf qualité w stabilité qbel ma t9arrar tchtari.",
-                    },
-                    {
-                      question: "Chno ndir ila wa9fat l'IPTV?",
-                      answer:
-                        "Ila wa9fat chi mara, sir WhatsApp dyalna w ghadi n3awdou nfa3lou lik l'accès. Support 24/7 khdemin m3ak.",
-                    },
-                    {
-                      question: "Chno kaykoun l'mot de passe ou les infos?",
-                      answer:
-                        "Mli tachri, ghadi tsawer m3ana l'application li katsst3ml, w ghadi n3touk les infos (username/password) bash tbda tchouf l'IPTV.",
-                    },
-                  ].map((faq, i) => (
+                  {(
+                    t("faq.questions", { returnObjects: true }) as Array<{
+                      question: string;
+                      answer: string;
+                    }>
+                  ).map((faq, i) => (
                     <motion.div
                       key={i}
                       initial={{ opacity: 0, y: 10 }}
@@ -988,12 +886,10 @@ export default function LandingPage() {
                 className="flex flex-col items-center justify-center space-y-6 text-center"
               >
                 <h2 className="text-3xl md:text-4xl lg:text-5xl text-gray-50 font-bold tracking-tight">
-                  Ready to Unlock Non-Stop Entertainment?
+                  {t("cta.title")}
                 </h2>
                 <p className="mx-auto max-w-[700px]  text-gray-300 md:text-xl">
-                  Join thousands of viewers enjoying over 3000 live channels and
-                  on-demand content. With MoonPlay, you’re always just a click
-                  away from premium entertainment.
+                  {t("cta.description")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mt-4">
                   <Button
@@ -1006,7 +902,7 @@ export default function LandingPage() {
                   </Button>
                 </div>
                 <p className="text-sm text-gray-300 mt-4">
-                  Instant activation. No contracts. Stream anywhere, anytime.
+                  {t("cta.subtitle")}
                 </p>
               </motion.div>
             </div>
@@ -1023,8 +919,7 @@ export default function LandingPage() {
                   <span>MoonPlay</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Stream smarter with MoonPlay — over 3000 channels, one
-                  powerful IPTV platform, endless entertainment.
+                  {t("footer.description")}
                 </p>
                 <div className="flex gap-4">
                   <Link
@@ -1092,7 +987,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className="space-y-4">
-                <h4 className="text-sm font-bold">Product</h4>
+                <h4 className="text-sm font-bold">{t("footer.product")}</h4>
                 <ul className="space-y-2 text-sm">
                   <li>
                     <Link
@@ -1129,7 +1024,7 @@ export default function LandingPage() {
                 </ul>
               </div>
               <div className="space-y-4">
-                <h4 className="text-sm font-bold">Resources</h4>
+                <h4 className="text-sm font-bold">{t("footer.resources")}</h4>
                 <ul className="space-y-2 text-sm">
                   <li>
                     <Link
@@ -1166,7 +1061,7 @@ export default function LandingPage() {
                 </ul>
               </div>
               <div className="space-y-4">
-                <h4 className="text-sm font-bold">Company</h4>
+                <h4 className="text-sm font-bold">{t("footer.company")}</h4>
                 <ul className="space-y-2 text-sm">
                   <li>
                     <Link
@@ -1205,26 +1100,27 @@ export default function LandingPage() {
             </div>
             <div className="flex flex-col gap-4 sm:flex-row justify-between items-center border-t border-border/40 pt-8">
               <p className="text-xs text-muted-foreground">
-                &copy; {new Date().getFullYear()} MoonPlay. All rights reserved.
+                &copy; {new Date().getFullYear()} MoonPlay.{" "}
+                {t("footer.copyright")}
               </p>
               <div className="flex gap-4">
                 <Link
                   href="#"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Privacy Policy
+                  {t("footer.privacy")}
                 </Link>
                 <Link
                   href="#"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Terms of Service
+                  {t("footer.terms")}
                 </Link>
                 <Link
                   href="#"
                   className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Cookie Policy
+                  {t("footer.cookies")}
                 </Link>
               </div>
             </div>

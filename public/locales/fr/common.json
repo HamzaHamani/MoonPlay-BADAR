@@ -75,17 +75,125 @@
   "testimonials": {
     "badge": "Témoignages",
     "title": "Aimé par les Équipes du Monde Entier",
-    "description": "Ne nous croyez pas sur parole. Découvrez ce que nos clients disent de leur expérience."
+    "description": "Ne nous croyez pas sur parole. Découvrez ce que nos clients disent de leur expérience.",
+    "items": [
+      {
+        "quote": "MoonPlay a été formidable avec nous. Il y a tellement de chaînes et en qualité HD ! Je n'ai plus besoin de satellite.",
+        "author": "Karim El Amrani",
+        "role": "Casablanca",
+        "rating": 5
+      },
+      {
+        "quote": "Mon ami m'a fait découvrir MoonPlay, et depuis que je l'ai essayé je suis devenu accro ! Champions League, Netflix, tout en un endroit.",
+        "author": "Yassine B.",
+        "role": "Fès",
+        "rating": 5
+      },
+      {
+        "quote": "L'équipe MoonPlay vous répond immédiatement si vous avez un problème. Leur service client est de premier ordre.",
+        "author": "Amina Zahraoui",
+        "role": "Rabat",
+        "rating": 5
+      },
+      {
+        "quote": "J'ai essayé d'autres IPTV avant, mais MoonPlay est d'un autre niveau. Fiable et facile à installer.",
+        "author": "Imane K.",
+        "role": "Tanger",
+        "rating": 5
+      },
+      {
+        "quote": "Ils ont des chaînes de sport, des séries, des dessins animés... Mon fils adore et ça nous apporte du super contenu à la maison.",
+        "author": "Mohamed L.",
+        "role": "Agadir",
+        "rating": 5
+      },
+      {
+        "quote": "L'installation était rapide et je n'ai pas attendu. Ils m'ont donné un code, et en 5 minutes j'ai commencé à regarder.",
+        "author": "Soukaina H.",
+        "role": "Marrakech",
+        "rating": 5
+      }
+    ]
   },
   "pricing": {
     "badge": "Tarifs",
     "title": "Tarifs Simples et Transparents",
-    "description": "Choisissez le plan qui convient à votre entreprise. Tous les plans incluent un essai gratuit de 14 jours."
+    "description": "Choisissez le plan qui convient à votre entreprise. Tous les plans incluent un essai gratuit de 14 jours.",
+    "plans": [
+      {
+        "name": "Basique",
+        "price": "250 MAD",
+        "description": "Streaming essentiel avec chaînes en direct et collection de films pour divertissement de base.",
+        "features": [
+          "3000+ chaînes en direct dans le monde",
+          "Vaste collection de films et séries",
+          "Streaming de bonne qualité (HD)",
+          "Support multi-appareils",
+          "Support client 24h/24 et 7j/7"
+        ],
+        "cta": "Acheter Maintenant"
+      },
+      {
+        "name": "VIP",
+        "price": "350 MAD",
+        "description": "Expérience améliorée avec sélection de chaînes élargie et bibliothèque de contenu premium.",
+        "features": [
+          "10 000+ chaînes mondiales",
+          "Bibliothèque premium de films et séries",
+          "Streaming haute qualité (FHD)",
+          "Compatibilité d'appareils prioritaire",
+          "Support client avancé"
+        ],
+        "cta": "Acheter Maintenant",
+        "popular": true
+      },
+      {
+        "name": "Premium",
+        "price": "500 MAD",
+        "description": "Accès complet aux sports mondiaux et divertissement avec performance de premier plan.",
+        "features": [
+          "Toutes les chaînes mondiales et sportives",
+          "Collection massive de films et séries",
+          "Qualité ultra-haute (FHD / 4K) avec performance maximale",
+          "Supporte tous les appareils et systèmes",
+          "Support client prioritaire et continuité garantie"
+        ],
+        "cta": "Acheter Maintenant"
+      }
+    ],
+    "popularLabel": "Le Plus Populaire",
+    "perMonth": "/mois"
   },
   "faq": {
     "badge": "FAQ",
     "title": "Questions Fréquemment Posées",
-    "description": "Trouvez des réponses aux questions courantes sur notre plateforme."
+    "description": "Trouvez des réponses aux questions courantes sur notre plateforme.",
+    "questions": [
+      {
+        "question": "Qu'est-ce que MoonPlay IPTV ?",
+        "answer": "MoonPlay IPTV est un service de streaming premium qui donne accès à des milliers de chaînes TV en direct, films et séries du monde entier. Notre service offre un streaming haute qualité avec des serveurs fiables et un support client 24h/24 et 7j/7."
+      },
+      {
+        "question": "Combien de chaînes proposez-vous ?",
+        "answer": "Nous proposons plus de 10 000 chaînes TV en direct de divers pays et régions, incluant sport, actualités, divertissement, documentaires et contenu jeunesse. Notre liste de chaînes est constamment mise à jour avec de nouveaux ajouts."
+      },
+      {
+        "question": "Quels appareils sont supportés ?",
+        "answer": "MoonPlay IPTV est compatible avec Smart TV, appareils Android, appareils iOS, Windows, macOS, Amazon FireStick, boîtiers Android TV, boîtiers MAG, et plus encore. Nous fournissons des guides d'installation faciles pour tous les appareils supportés."
+      },
+      {
+        "question": "Y a-t-il un essai gratuit disponible ?",
+        "answer": "Oui, nous offrons un essai gratuit de 24 heures pour les nouveaux clients. Cela vous permet de tester la qualité de notre service, la sélection de chaînes et les performances de streaming avant de prendre une décision d'achat."
+      },
+      {
+        "question": "Quels modes de paiement acceptez-vous ?",
+        "answer": "Nous acceptons divers modes de paiement incluant PayPal, cartes de crédit (Visa, MasterCard, American Express), cryptomonnaies, et autres passerelles de paiement sécurisées pour votre commodité."
+      },
+      {
+        "question": "À quelle vitesse vais-je recevoir mes identifiants de connexion ?",
+        "answer": "Vos identifiants de connexion seront livrés à votre email dans les 5-30 minutes après confirmation du paiement. Notre système automatisé assure une activation rapide de votre abonnement."
+      }
+    ]
   },
   "cta": {
     "title": "Prêt à Débloquer un Divertissement Non-Stop ?",

@@ -15,8 +15,8 @@ const nextConfig = {
   compress: true,
   // i18n configuration
   i18n: {
-    locales: ['en', 'fr', 'ar'],
-    defaultLocale: 'en',
+    locales: ["en", "fr", "ar"],
+    defaultLocale: "en",
   },
   // SEO optimizations
   trailingSlash: false,

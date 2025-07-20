@@ -17,7 +17,7 @@ body {
 
 /* Arabic font support */
 [lang="ar"] {
-  font-family: 'Cairo', 'Tajawal', Arial, sans-serif;
+  font-family: "Cairo", "Tajawal", Arial, sans-serif;
 }
 
 @layer utilities {
