@@ -314,33 +314,33 @@ export default function LandingPage() {
                   className="py-2 text-sm font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Features
+                  {t("nav.features")}
                 </Link>
                 <Link
                   href="#testimonials"
                   className="py-2 text-sm font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Testimonials
+                  {t("nav.testimonials")}
                 </Link>
                 <Link
                   href="#pricing"
                   className="py-2 text-sm font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Pricing
+                  {t("nav.pricing")}
                 </Link>
                 <Link
                   href="#faq"
                   className="py-2 text-sm font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  FAQ
+                  {t("nav.faq")}
                 </Link>
                 <div className="flex flex-col gap-2 pt-2 border-t">
                   <a href={wtsp} target="_blank">
                     <Button className="rounded-full">
-                      Start Watching
+                      {t("nav.startWatching")}
                       <ChevronRight className="ml-1 size-4" />
                     </Button>
                   </a>
@@ -382,7 +382,7 @@ export default function LandingPage() {
                       size="lg"
                       className="rounded-full h-12 px-8 text-base"
                     >
-                      Start Watching
+                      {t("nav.startWatching")}
                       <ArrowRight className="ml-2 size-4" />
                     </Button>
                   </a>
@@ -392,7 +392,7 @@ export default function LandingPage() {
                       variant="outline"
                       className="rounded-full h-12 px-8 text-base"
                     >
-                      Contact us
+                      {t("contactus")}
                     </Button>
                   </a>
                 </div>
@@ -715,9 +715,7 @@ export default function LandingPage() {
 
               <div className="mx-auto max-w-5xl">
                 <Tabs defaultValue="monthly" className="w-full">
-                  <div className="flex justify-center mb-8">
-                    <TabsList className="rounded-full p-1"></TabsList>
-                  </div>
+                  <div className="flex justify-center mb-8"></div>
                   <TabsContent value="monthly">
                     <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
                       {(
@@ -891,7 +889,7 @@ export default function LandingPage() {
                     variant="secondary"
                     className="rounded-full h-12 px-8 text-base"
                   >
-                    Contact Us to Subscribe
+                    {t("contactusS")}
                     <ArrowRight className="ml-2 size-4" />
                   </Button>
                 </div>
@@ -988,7 +986,7 @@ export default function LandingPage() {
                       href="#features"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      Features
+                      {t("nav.features")}
                     </Link>
                   </li>
                   <li>
@@ -996,7 +994,7 @@ export default function LandingPage() {
                       href="#pricing"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      Pricing
+                      {t("nav.pricing")}
                     </Link>
                   </li>
                   <li>
@@ -1004,7 +1002,7 @@ export default function LandingPage() {
                       href="#"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      Integrations
+                      {t("nav.faq")}
                     </Link>
                   </li>
                   <li>
@@ -1012,7 +1010,7 @@ export default function LandingPage() {
                       href="#"
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      API
+                      {t("nav.testimonials")}
                     </Link>
                   </li>
                 </ul>
