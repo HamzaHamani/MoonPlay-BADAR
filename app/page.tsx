@@ -54,7 +54,8 @@ export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const { t } = useTranslation("common");
-  const { currentLanguage, changeLanguage, languages, isRTL, mounted } = useLanguage();
+  const { currentLanguage, changeLanguage, languages, isRTL, mounted } =
+    useLanguage();
 
   const wtsp = "https://wa.link/7l10vn";
   useEffect(() => {

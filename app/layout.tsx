@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "MoonPlay",
     images: [
       {
-        url: "/hero.jpg",
+        url: "/og.jpg",
         width: 1280,
         height: 720,
         alt: "MoonPlay IPTV Service - Premium Streaming Platform",
@@ -42,7 +42,20 @@ export const metadata: Metadata = {
     title: "MoonPlay - Premium IPTV Service | 3000+ Live Channels",
     description:
       "Stream 3000+ live TV channels, sports, movies & series with MoonPlay IPTV. HD/4K quality, worldwide content, multi-device support.",
-    images: ["/hero.jpg"],
+    images: ["/og.jpg"],
+    creator: "@moonplay",
+    site: "@moonplay",
+  },
+  other: {
+    // WhatsApp and Telegram specific metadata
+    "og:image:alt": "MoonPlay IPTV Service - Premium Streaming Platform",
+    "og:image:type": "image/jpeg",
+    "og:image:width": "1280",
+    "og:image:height": "720",
+    // LinkedIn specific
+    "article:author": "MoonPlay",
+    // Telegram specific preview
+    "telegram:channel": "@moonplay",
   },
   robots: {
     index: true,
