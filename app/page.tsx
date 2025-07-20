@@ -716,14 +716,7 @@ export default function LandingPage() {
               <div className="mx-auto max-w-5xl">
                 <Tabs defaultValue="monthly" className="w-full">
                   <div className="flex justify-center mb-8">
-                    <TabsList className="rounded-full p-1">
-                      <TabsTrigger
-                        value="annually"
-                        className="rounded-full px-6"
-                      >
-                        Dont miss it
-                      </TabsTrigger>
-                    </TabsList>
+                    <TabsList className="rounded-full p-1"></TabsList>
                   </div>
                   <TabsContent value="monthly">
                     <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
