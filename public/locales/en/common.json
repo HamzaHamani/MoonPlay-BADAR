@@ -124,7 +124,7 @@
     "plans": [
       {
         "name": "Basic",
-        "price": "250 MAD",
+        "price": "150 MAD",
         "description": "Essential streaming with live channels and movie collection for basic entertainment.",
         "features": [
           "3000+ live channels worldwide",
@@ -144,7 +144,8 @@
           "Premium movie & series library",
           "High quality streaming (FHD)",
           "Priority device compatibility",
-          "Advanced customer support"
+          "Advanced customer support",
+          "Secondary account provided in case of site outage"
         ],
         "cta": "Buy Now",
         "popular": true
@@ -158,7 +159,8 @@
           "Massive movie & series collection",
           "Ultra-high quality (FHD / 4K) with top performance",
           "Supports all devices and systems",
-          "Priority customer support & guaranteed continuity"
+          "Priority customer support & guaranteed continuity",
+          "Secondary account provided in case of site outage"
         ],
         "cta": "Buy Now"
       }
